@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("Hello world!");
+
+      //   function greetUser() {
+      //     const userAge = prompt("How old are you?");
+
+      //     alert(`Happy birthday! You are ${userAge} years old!`);
+      //   }
+
+      //   function calculateBirthYear(age) {
+      //     const ageAsInteger = parseInt(age);
+      //     return 2021 - ageAsInteger;
+      //   }
+
+      // function printWindow(){
+      //     console.log(this);
+      // }
+
+      const printWindow = () => {
+        console.log(this);
+      };
+
+        const myObject = {
+          name: "Jonathan",
+          sayHello: function () {
+            console.log(this.name);
+          },
+        };
+
+    //   const myObject = {
+    //     firstName: "Jonathan",
+    //     sayHello: () => {
+    //       console.log(this);
+    //       console.log(this.firstName);
+    //     },
+    //   };
+
+      const calculateBirthYear = (age) => 2021 - parseInt(age);
+
+      const greetUser = () => {
+        const userAge = prompt("How old are you?");
+
+        alert(`Happy birthday! You are ${userAge} years old!`);
+        alert(`You were born in ${calculateBirthYear(userAge)}`);
+      };
+
+      //   greetUser();
+
+      //   printWindow();
+
+      myObject.sayHello();
+    </script>
+  </body>
+</html>
